@@ -1,0 +1,30 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitClientBundle:Default:fields.html.twig' %}
+
+{% block clientcontent %}
+    <section class="col-md-8" id="colorNav">
+        <div class="content-box">
+            <h3>Add E-Mail Forward</h3>
+			{% if message != '' %}
+                            <div class="alert alert-info">{{ message }}</div>
+                        {% endif %}
+            <form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+			{{ form_rest(form) }}
+                            <hr class="margin-top-bottom" />
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-9">
+                                    {% if modify is defined %}
+                                        <button class="btn btn-success" type="submit">Update Forward</button>
+                                    {% else %}
+                                        <button class="btn btn-success" type="submit">Add Forward</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </form>
+
+        </div>
+        <br /><br />
+        <div class="divider-line-narrow"></div>
+        <div class="content-footer"><a href="{{ path('hostkit_client_domains_mail_forward', { domainId: domainId }) }}"><span></span> Back to overview</a> </div>
+    </section>
+{% endblock %}

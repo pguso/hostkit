@@ -1,0 +1,34 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+
+{% block content %}
+    <div class="span10">
+        <div>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="{{ path('hostkit_client_hosting') }}">Hosting</a> <span class="divider">/</span>
+                </li>
+                <li>
+                    <a href="#">Letzte Besucher</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="box span12">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th-list"></i> Letzte Besucher</h2>
+
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                {{ lastvisitors }}
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var hosting = 'set';
+    </script>
+{% endblock %}

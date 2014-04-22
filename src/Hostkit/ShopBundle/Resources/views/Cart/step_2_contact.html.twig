@@ -1,0 +1,40 @@
+{% extends 'HostkitShopBundle:Cart:step_1_domain.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields.html.twig' %}
+
+
+
+                    {% block stepcontent %}
+                        <div id="one" class="padding-top">
+                            <div class="box-order">
+                                <h4> Add Informations »</h4>
+                                <section class="box-order-content">
+                                    {% if error is defined %}
+                                        <div class="errormsg">{{ error }}</div>
+                                    {% endif %}
+
+									<form action="" method="post" class="form-horizontal row-fluid" id="orderform" {{ form_enctype(form) }}>
+
+
+									{{ form_rest(form) }}
+									<hr class="margin-top-bottom" />
+									<div class="form-group">
+										<div class="col-lg-offset-1 col-lg-9">
+											<button class="btn btn-success round" type="submit">Review Order & Purchase</button>
+										</div>
+									</div>
+									</form>
+
+                                <div id="termsandconditions" class="zoom-anim-dialog mfp-hide">
+                                    <h3>Terms and Conditions</h3>
+                                    <p>{{ settings.termsconditions }}</p>
+                                </div>
+                                </section>
+                            </div>
+                            <section class="box-result" style="display: none;">
+                                <h3 class="lead">{{ 'cart.domain.searchresult'|trans }}</h3>
+                                <section class="result">
+
+                                </section>
+                            </section>
+                        </div>
+                    {% endblock %}

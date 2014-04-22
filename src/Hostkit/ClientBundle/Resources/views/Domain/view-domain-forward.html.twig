@@ -1,0 +1,60 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+
+{% block clientcontent %}
+    <section class="col-md-8" id="colorNav">
+        <div class="content-box">
+            <h3>Forwarding for {{ forwardDomain.domainname }}</h3>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Forward to</th>
+                    <th>URL_Masking</th>
+                    <th>Path Forwarding</th>
+                    <th>Subdomain Forwarding</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if forwardDomain.forward == 'http://' %}
+                    <tr>
+                        <td colspan="4">No Forward set.</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td>{{ forwardDomain.forward }}</td>
+                        {% if forwardDomain.urlmasking == 'false'%}
+                            <td>No</td>
+                        {% else %}
+                            <td>Yes</td>
+                        {% endif %}
+
+                        {% if forwardDomain.pathforwarding == 'false'%}
+                            <td>No</td>
+                        {% else %}
+                            <td>Yes</td>
+                        {% endif %}
+
+                        {% if forwardDomain.subdomainforwarding == 'false'%}
+                            <td>No</td>
+                        {% else %}
+                            <td>Yes</td>
+                        {% endif %}
+                        <td></td>
+                    </tr>
+
+                {% endif %}
+                </tbody>
+            </table>
+
+        </div>
+        <br/><br/>
+
+        <div class="divider-line-narrow"></div>
+        <div class="content-footer">
+            <a href="{{ path('hostkit_client_domains_config', { domainId: domainId }) }}"><span></span> Back to config
+                site</a>
+            <a href="{{ path('hostkit_client_domains_forward_add', { domainId: domainId }) }}"><span></span> Set
+                Forwarding</a>
+        </div>
+    </section>
+{% endblock %}

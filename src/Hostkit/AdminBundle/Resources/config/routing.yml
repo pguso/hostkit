@@ -1,0 +1,24 @@
+hostkit_xs_admin_homepage:
+    pattern:  /
+    defaults: { _controller: HostkitAdminBundle:Default:index }
+
+_cpanel_import:
+    resource: "@HostkitAdminBundle/Resources/config/cpanel/routing.yml"
+
+_server_import:
+    resource: "@HostkitAdminBundle/Resources/config/server/routing.yml"
+
+_products_import:
+    resource: "@HostkitAdminBundle/Resources/config/products/routing.yml"
+
+_cms_import:
+    resource: "@HostkitAdminBundle/Resources/config/cms/routing.yml"
+
+_settings_import:
+    resource: "@HostkitAdminBundle/Resources/config/settings/routing.yml"
+
+_clients_import:
+    resource: "@HostkitAdminBundle/Resources/config/clients/routing.yml"
+
+_support_import:
+    resource: "@HostkitAdminBundle/Resources/config/support/routing.yml"

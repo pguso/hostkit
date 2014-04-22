@@ -1,0 +1,13 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+
+{% block content %}
+    <div class="container margin-top page">
+        <div class="row">
+		
+		{% for p in page %}
+		{{ p.content|raw }}
+		{% endfor %}
+		
+		</div>
+
+{% endblock %}

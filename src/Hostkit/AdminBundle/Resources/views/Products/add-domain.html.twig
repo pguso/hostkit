@@ -1,0 +1,93 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields.html.twig' %}
+
+{% block title %}Admin Interface - Products{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Domains</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+
+                    <div class="padd">
+                        {% if modify is defined %}
+                            <h6>Modify Domain</h6>
+                        {% else %}
+                            <h6>Add new Domain</h6>
+                        {% endif %}
+                        <hr class="margin-top-bottom" />
+                        <form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+
+                            <div class="form-group">
+                                {{ form_label(form.tld, label|default(null), {'label_attr': {'class': 'col-lg-4 control-label' }}) }}
+                                {{ form_errors(form.tld) }}
+                                <div class="col-lg-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">.</span>
+                                        {{ form_widget(form.tld, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                {{ form_label(form.price, label|default(null), {'label_attr': {'class': 'col-lg-4 control-label' }}) }}
+                                {{ form_errors(form.price) }}
+                                <div class="col-lg-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        {{ form_widget(form.price, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                {{ form_label(form.cost, label|default(null), {'label_attr': {'class': 'col-lg-4 control-label' }}) }}
+                                {{ form_errors(form.cost) }}
+                                <div class="col-lg-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        {{ form_widget(form.cost, {'attr': {'class': 'form-control' }}) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{ form_rest(form) }}
+                            <hr class="margin-top-bottom" />
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-9">
+                                    {% if modify is defined %}
+                                        <button class="btn btn-success" type="submit">Update Domain</button>
+                                    {% else %}
+                                        <button class="btn btn-success" type="submit">Add Domain</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget-foot">
+                        <a href="{{ path('hostkit_xs_domains_overview') }}">
+                            <button class="btn btn-info">Back to Package overview</button>
+                        </a>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

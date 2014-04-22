@@ -1,0 +1,50 @@
+hostkit_xs_cpanel_packages_overview:
+    pattern:  /packages
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Packages:index }
+
+hostkit_xs_cpanel_packages_add:
+    pattern:  /packages/add
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Packages:add }
+
+hostkit_xs_cpanel_packages_modify:
+    pattern:  /packages/modify/{packageId}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Packages:modify }
+
+hostkit_xs_cpanel_packages_detail:
+    pattern:  /packages/detail/{packageId}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Packages:detail }
+
+hostkit_xs_cpanel_packages_delete:
+    pattern:  /packages/delete/{packageId}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Packages:delete }
+
+hostkit_xs_cpanel_accounts_overview:
+    pattern:  /accounts
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:index }
+
+hostkit_xs_cpanel_accounts_add:
+    pattern:  /accounts/add
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:add }
+
+hostkit_xs_cpanel_accounts_modify:
+    pattern:  /accounts/modify/{username}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:modify }
+
+hostkit_xs_cpanel_accounts_detail:
+    pattern:  /accounts/detail/{username}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:detail }
+
+hostkit_xs_cpanel_accounts_suspend:
+    pattern:  /accounts/suspend/{username}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:suspend }
+
+hostkit_xs_cpanel_accounts_unsuspend:
+    pattern:  /accounts/unsuspend/{username}
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Accounts:unsuspend }
+
+hostkit_xs_cpanel_plans_overview:
+    pattern:  /plans
+    defaults: { _controller: HostkitAdminBundle:Cpanel\Plans:index }
+
+
+

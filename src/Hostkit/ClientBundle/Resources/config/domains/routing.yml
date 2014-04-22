@@ -1,0 +1,55 @@
+hostkit_client_domains_overview:
+    pattern:  /domains/overview
+    defaults: { _controller: HostkitClientBundle:Domain:overview }
+
+hostkit_client_domains_config:
+    pattern:  /domains/config/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:config }
+
+hostkit_client_domains_mail:
+    pattern:  /domains/mail/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:viewMail }
+
+hostkit_client_domains_mail_add:
+    pattern:  /domains/mail/add/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:addMail }
+
+hostkit_client_domains_mail_forward:
+    pattern:  /domains/mail/forward/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:viewMailForward }
+
+hostkit_client_domains_mail_forward_add:
+    pattern:  /domains/mail/forward/add/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:addMailForward }
+
+hostkit_client_domains_show_hosting_config:
+    pattern:  /domains/hosting/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:webspace }
+
+hostkit_client_domains_forward:
+    pattern:  /domains/forward/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:viewDomainForward }
+
+hostkit_client_domains_forward_add:
+    pattern:  /domains/forward/add/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:addDomainForward }
+
+hostkit_client_domains_nameserver:
+    pattern:  /domains/ns/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:modifyNameserver }
+
+hostkit_client_domains_ips:
+    pattern:  /domains/ip/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:addIps }
+
+hostkit_client_domains_subdomains:
+    pattern:  /domains/subdomains/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:viewSubdomains }
+
+hostkit_client_domains_subdomains_add:
+    pattern:  /domains/subdomain/add/{domainId}
+    defaults: { _controller: HostkitClientBundle:Domain:addSubdomain }
+
+hostkit_client_domains_subdomains_modify:
+    pattern:  /domains/subdomain/modify/{domainId}/{sub}
+    defaults: { _controller: HostkitClientBundle:Domain:modifySubdomain }

@@ -1,0 +1,110 @@
+[09-Mar-2014 17:50:36 UTC] PHP Warning:  require(/home/bundles/public_html/hostkit/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:50:36 UTC] PHP Fatal error:  require(): Failed opening required '/home/bundles/public_html/hostkit/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:07 UTC] PHP Warning:  require(/home/bundles/public_html/hostkit/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:07 UTC] PHP Fatal error:  require(): Failed opening required '/home/bundles/public_html/hostkit/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:34 UTC] PHP Warning:  require(/home/bundles/public_html/hostkit/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:34 UTC] PHP Fatal error:  require(): Failed opening required '/home/bundles/public_html/hostkit/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:38 UTC] PHP Warning:  require(/home/bundles/public_html/hostkit/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 17:51:38 UTC] PHP Fatal error:  require(): Failed opening required '/home/bundles/public_html/hostkit/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 18:46:34 UTC] PHP Warning:  require(/home/bundles/public_html/hostkit/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 18:46:34 UTC] PHP Fatal error:  require(): Failed opening required '/home/bundles/public_html/hostkit/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bundles/public_html/hostkit/app/autoload.php on line 9
+[09-Mar-2014 21:56:31 UTC] PHP Warning:  Uncaught exception 'Symfony\Component\Debug\Exception\DummyException' in /home/bundles/public_html/hostkit/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php:174
+Stack trace:
+#0 /home/bundles/public_html/hostkit/src/Hostkit/AdminBundle/Controller/Settings/DefaultController.php(84): Symfony\Component\Debug\ErrorHandler->handle(8, 'Undefined varia...', '/home/bundles/p...', 84, Array)
+#1 [internal function]: Hostkit\AdminBundle\Controller\Settings\DefaultController->indexAction(Object(Symfony\Component\HttpFoundation\Request))
+#2 /home/bundles/public_html/hostkit/app/bootstrap.php.cache(2911): call_user_func_array(Array, Array)
+#3 /home/bundles/public_html/hostkit/app/bootstrap.php.cache(2883): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(Symfony\Component\HttpFoundation\Request), 1)
+#4 /home/bundles/public_html/hostkit/app/bootstrap.php.cache(3022): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#5 /home/bundles/public_ht in /home/bundles/public_html/hostkit/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php on line 174
+[09-Mar-2014 21:56:31 UTC] PHP Fatal error:  Call to a member function updateUser() on a non-object in /home/bundles/public_html/hostkit/src/Hostkit/AdminBundle/Controller/Settings/DefaultController.php on line 84
+[10-Mar-2014 13:28:39 UTC] PHP Fatal error:  Class 'Stripe' not found in /home/bundles/public_html/hostkit/src/Avro/StripeBundle/DependencyInjection/AvroStripeExtension.php on line 43
+[18-Mar-2014 12:45:29 UTC] PHP Warning:  require(/home/develop/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/develop/app/autoload.php on line 9
+[18-Mar-2014 12:45:29 UTC] PHP Fatal error:  require(): Failed opening required '/home/develop/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/develop/app/autoload.php on line 9
+[18-Mar-2014 12:45:38 UTC] PHP Warning:  require(/home/develop/app/../vendor/autoload.php): failed to open stream: No such file or directory in /home/develop/app/autoload.php on line 9
+[18-Mar-2014 12:45:38 UTC] PHP Fatal error:  require(): Failed opening required '/home/develop/app/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/develop/app/autoload.php on line 9
+[18-Mar-2014 12:54:45 UTC] PHP Fatal error:  Class 'Hostkit\EcashBundle\HostkitEcashBundle' not found in /home/develop/app/AppKernel.php on line 38
+[08-Apr-2014 08:54:27 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 08:54:32 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 08:54:53 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 08:54:54 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 08:54:56 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:00:49 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:00:49 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:00:56 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:00:56 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:00:59 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:01:00 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:01:05 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:01:05 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:04:18 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:17 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:20 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:22 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:24 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:25 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:29 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:05:30 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:06:29 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:06:30 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:19:58 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:28:50 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:29:02 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:43:41 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:43:41 UTC] PHP Fatal error:  Call to a member function has() on a non-object in /home/develop/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php on line 202
+[08-Apr-2014 09:44:32 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:44:32 UTC] PHP Fatal error:  Call to a member function has() on a non-object in /home/develop/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php on line 202
+[08-Apr-2014 09:44:46 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:44:46 UTC] PHP Fatal error:  Call to a member function has() on a non-object in /home/develop/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php on line 202
+[08-Apr-2014 09:44:47 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:44:47 UTC] PHP Fatal error:  Class 'Hostkit\ClientBundle\Extensions\TwigVars' not found in /home/develop/app/cache/dev/appDevDebugProjectContainer.php on line 3667
+[08-Apr-2014 09:47:02 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:47:50 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:04 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:08 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:11 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:19 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:19 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:21 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:25 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:26 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:30 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:48:32 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:00 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:33 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:47 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:50 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:54 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:50:57 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:51:26 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:51:26 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/develop/src/Hostkit/ShopBundle/Controller/SupportController.php on line 55
+[08-Apr-2014 09:52:42 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:52:42 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/develop/src/Hostkit/ShopBundle/Controller/SupportController.php on line 55
+[08-Apr-2014 09:52:46 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:52:53 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:52:57 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:53:56 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:53:57 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:53:59 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:00 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:01 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:04 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:31 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:33 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:58 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:54:59 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:55:00 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:56:24 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:56:27 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:56:48 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:56:50 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:56:51 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:57:02 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:57:05 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 09:57:15 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:14:51 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:09 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:13 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:14 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:18 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:19 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0
+[08-Apr-2014 12:15:24 UTC] PHP Warning:  Module 'intl' already loaded in Unknown on line 0

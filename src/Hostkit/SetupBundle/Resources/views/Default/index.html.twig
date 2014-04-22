@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Blog-Magazine Website Template | Home :: w3layouts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href="admin/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="admin/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<link href="setup/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="setup/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="main">
+<div class="col-md-1">
+</div>
+<div class="col-md-2">
+<div class="menu_box_list">
+				      		<ul>
+						  		<li><a href="#"> <i class="icon-angle-right"> </i><span>Check</span></a></li>
+						  		<li><a href="#"> <i class="icon-angle-right"> </i> <span>Store</span></a></li>
+						  		<li class="active"><a href="#"> <i class="icon-angle-right"> </i> <span>Blog</span></a></li>
+			  					<li><a href="#"> <i class="icon-angle-right"> </i><span>Community</span></a></li>
+			  					<li><a href="#"> <i class="icon-angle-right"></i><span>Contest</span></a></li>
+			  					<li><a href="#"> <i class="icon-angle-right"> </i> <span>About</span></a></li>
+			  					<li><a href="#"> <i class="icon-angle-right"></i> <span>Contact</span></a></li>
+				    		</ul>
+				    		<div class="clear"></div>
+				      </div>
+		</div>
+					  
+</div>
+<div class="col-md-7" style="background: #fff; min-height: 70px; padding-top: 10px;">
+<div class="upload-status">
+								<h4>Installation Progress</h4>
+								<span><label> </label></span>
+								<p></p>
+							</div>
+</div>
+
+<div class="col-md-7" style="background: #fff; margin: 20px 0 0 0;">
+<h3>Check Requirements</h3>
+
+<ul>
+{% for requirement in requirements %}
+	<li> {{ requirement.helpText }}</li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+
+{% block title %}Admin Interface - Clients{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Clients</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+				<div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover table-sort-desc">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>E-Mail</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if clients is empty %}
+                            <tr>
+                                <td colspan="7">No Data available</td>
+                            </tr>
+                        {% else %}
+                            {% for client in clients %}
+                                <tr data-hide="{{ client.id }}">
+                                    <td>{{ client.id }}</td>
+                                    <td>{{ client.email }}</td>
+                                    <td>{{ client.firstname }}</td>
+                                    <td>{{ client.lastname }}</td>
+                                    {% if client.statusId == 1 %}
+                                        <td><span class="label label-default">Inactive</span></td>
+                                    {% else %}
+                                        <td><span class="label label-success">Active</span></td>
+                                    {% endif %}
+                                    <td>
+                                        <a href="{{ path('hostkit_xs_client_detail', {'clientId': client.id }) }}">
+                                            <button class="btn btn-xs btn-success"><i class="icon-search"></i></button>
+                                        </a>
+
+                                        <a href="{{ path('hostkit_xs_clients_write_email', {'clientId': client.id }) }}">
+                                            <button class="btn btn-xs btn-primary"><i class="icon-envelope"></i></button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+					</div>
+
+                    <div class="widget-foot">
+                        <a href="">
+                        </a>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

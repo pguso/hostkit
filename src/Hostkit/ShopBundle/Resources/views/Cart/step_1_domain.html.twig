@@ -1,0 +1,63 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+
+
+{% block content %}
+    <section id="content">
+        <div class="container padding-top">
+            <div class="row">
+
+                <div class="col-md-12">
+                    {% block stepcontent %}
+                    <div id="one">
+                        <div class="box-order">
+                            <h4> Choose Domain »</h4>
+                            <section class="box-order-content">
+                                <div id="msg" style="display: none"></div>
+
+                                <!-- order form start -->
+                                <form method="post" action="" onsubmit="return false;" style="display: block;"
+                                      class="clearfix">
+                                    <div class="radio">
+
+                                        <label for="regdomain" class="label_radio">
+                                            <input type="radio" name="domain" id="regdomain" value="register" checked/>
+                                            Register Domain</label>
+
+                                        <label for="owndomain" class="label_radio">
+                                            <input type="radio" name="domain" id="owndomain" value="own"/>
+                                            Use existing Domain</label>
+
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+                                    <div id="registerdomain">
+                                        <input type="text" name="domainname" class="domain" placeholder="domainname"
+                                               required/>
+                                        <select name="tld" class="selectpicker tld-input" id="tld"
+                                                title='Choose one of the following...'>
+                                            {% for domain in domains %}
+                                                <option value="{{ domain.tld }}">{{ domain.tld }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <a href="" data-domain="register" id="checkdomain" class="btn btn-primary fltl"
+                                           onclick="return false;"><span
+                                                    class="icon-white icon-search"></span> Check Domain</a>
+                                    </div>
+                                </form>
+                                <!-- order form end -->
+
+                            </section>
+                        </div>
+                        <section class="box-result" style="display: none;">
+                            <h3 class="lead">Search Result</h3>
+                            <section class="result">
+
+                            </section>
+                        </section>
+                    </div>
+                    {% endblock %}
+                </div>
+
+                </div>
+
+{% endblock %}

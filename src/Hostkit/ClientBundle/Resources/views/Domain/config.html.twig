@@ -1,0 +1,38 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+
+{% block clientcontent %}
+    <section class="col-md-8" id="colorNav">
+        <ul>
+            <li class="green">
+                <a class="fa fa-envelope" href="{{ path('hostkit_client_domains_mail', { domainId: domainId }) }}"></a>
+
+                <p>Manage E-Mail Accounts</p>
+            </li>
+            <li class="green">
+                <a class="fa fa-mail-forward" href="{{ path('hostkit_client_domains_mail_forward', { domainId: domainId }) }}"></a>
+
+                <p>Mail Forward</p>
+            </li>
+            <li class="green">
+                <a class="fa fa-hdd-o" href="{{ path('hostkit_client_domains_show_hosting_config', { domainId: domainId }) }}"></a>
+
+                <p>Webspace</p>
+            </li>
+            <li class="green">
+                <a class="fa fa-road" href="{{ path('hostkit_client_domains_forward', { domainId: domainId }) }}"></a>
+
+                <p>Website Forwarding</p>
+            </li>
+            <li class="green">
+                <a class="fa fa-globe" href="{{ path('hostkit_client_domains_subdomains', { domainId: domainId }) }}"></a>
+
+                <p>Subdomains</p>
+            </li>
+            <li class="green">
+                <a class="fa fa-cogs" href="{{ path('hostkit_client_domains_ips', { domainId: domainId }) }}"></a>
+
+                <p>DNS Management</p>
+            </li>
+        </ul>
+    </section>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields.html.twig' %}
+
+{% block title %}Admin Interface - Add Support Department{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Support Tickets</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+
+                    <div class="padd">
+                            <h6>Add Support Department</h6>
+                        <hr class="margin-top-bottom" />
+                        {% if message != '' %}
+                            <div class="alert alert-info">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                        <form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+						{{ form_rest(form) }}
+                            <hr class="margin-top-bottom" />
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-9">
+                                        <button class="btn btn-success" type="submit">Add Department</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget-foot">
+                        <a href="{{ path('hostkit_xs_admin_support_tickets') }}">
+                            <button class="btn btn-info">Back to Support Ticket overview</button>
+                        </a>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

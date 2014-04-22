@@ -1,0 +1,28 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields.html.twig' %}
+
+{% block content %}
+    <div class="container margin-top">
+        <!-- Example row of columns -->
+        <div class="row">
+            <h3>Contact our Support Team</h3>
+            <hr />
+			{% if message != '' %}
+                       <div class="alert alert-success">{{ message }}</div>
+                    {% endif %}
+			<form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+
+        {{ form_rest(form) }}
+		
+		<hr class="margin-top-bottom"/>
+        <div class="form-group">
+            <div class="col-lg-offset-1 col-lg-9" style="margin: 0 0 0 25%">
+                <button class="btn btn-success" type="submit" style="float: right">Submit</button>
+            </div>
+        </div>
+		</form>
+			
+			</div>
+
+			
+			{% endblock %}

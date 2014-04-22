@@ -1,0 +1,109 @@
+.package {
+    width: 235px;
+    min-height: 330px;
+    float: left;
+}
+
+.package:nth-child(1) {
+    border-right: 1px solid #e3e3e3;
+}
+
+.package:nth-child(3) {
+    background: #fff;
+    border: 2px solid #ffb942;
+    border-radius: 4px;
+    padding: 20px 0 85px 0;
+    margin: -45px 0 0 0;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px 6px #f4f3f3;
+    -webkit-box-shadow: inset 0 0 3px 6px #f4f3f3;
+    box-shadow: inset 0 0 3px 6px #f4f3f3;
+}
+
+.package h3 {
+    text-align: center;
+    font-size: 34px;
+    color: #4d4d4d;
+    font-weight: normal;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottombottom, from(rgba(0, 0, 0, 1)), color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)));
+    text-shadow: 0 2px 0 #e9e9e9;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.package h3 span {
+    font-size: 21px;
+    color: #9d9d9d;
+    font-weight: normal;
+    clear: both;
+    display: block;
+}
+
+.package p {
+    width: 190px;
+    padding: 0 0 0 50px;
+    clear: both;
+    margin: 15px 0 0 0 !important;
+}
+
+.package .btn {
+    margin: 15px 0 0 70px;
+}
+
+/* Icons */
+
+.package .icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+.tick {
+    background: url(../images/icons/tick_button.png) no-repeat;
+}
+
+.no {
+    background: url(../images/icons/prohibition_button.png) no-repeat;
+}
+
+div.pager {
+    text-align: center;
+    margin: 1em 0;
+}
+
+div.pager span {
+    background: #2FB0D9;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 0.5em;
+    border-radius: 2px;
+}
+
+div.pager span.active {
+    background: #2B9CBF;
+
+}
+
+#tblsearch {
+    float: right;
+    margin: 0 0 15px 0;
+}
+
+#ctable tr td:nth-child(1) {
+    width: 90px;
+    overflow: hidden;
+}
+
+/*#ctable tr td:nth-child(2), #ctable tr td:nth-child(3) {
+    width: 175px;
+    overflow: hidden;
+}*/

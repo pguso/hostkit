@@ -1,0 +1,98 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields.html.twig' %}
+
+{% block title %}Admin Interface - Client E-Mail{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Order Status</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+
+                    <div class="padd">
+                        <h6>Change Order Status</h6>
+                        <hr class="margin-top-bottom"/>
+                        {% if message != '' %}
+                            <div class="alert alert-info">{{ message }}</div>
+                        {% endif %}
+                        <form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+                            {{ form_rest(form) }}
+                            <hr class="margin-top-bottom"/>
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-9">
+                                    <button class="btn btn-success" type="submit">Update Order</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="widget-foot">
+                        <a href="{{ path('hostkit_xs_client_detail', {'clientId': client.id }) }}">
+                            <button class="btn btn-info">Back to Client Detail view</button>
+                        </a>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Information</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content"></div>
+                <div class="padd">
+                    <ul class="recent">
+                        <li>
+                            <div class="recent-content">
+                                <h5>Active</h5>
+
+                                <p>If you set an order manually to active no automated task will take place. So dont foget to send an email to
+                                your client with the login details.</p>
+                                <a href="{{ path('hostkit_xs_clients_write_email', {'clientId': client.id }) }}"><span class="label label-info">Write E-Mail</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recent-content">
+                                <h5>Cancelled</h5>
+
+                                <p>If automated Jobs are enabled, Hosting Packages will be suspended and Domains will be cancelled and an E-Mail will be send to client.</p>
+                                <p>You should write something into the reason field. Because this Information will be added to the E-Mail that will be send to client.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="recent-content">
+                                <h5>Auto E-Mail</h5>
+
+                                <p>If you check this checkbox no automated E-Mails will send, after Status change.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

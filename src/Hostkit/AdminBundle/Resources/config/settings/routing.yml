@@ -1,0 +1,3 @@
+hostkit_xs_admin_settings:
+    pattern:  /settings
+    defaults: { _controller: HostkitAdminBundle:Settings\Default:index }

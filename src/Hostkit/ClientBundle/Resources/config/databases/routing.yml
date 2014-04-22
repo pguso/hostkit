@@ -1,0 +1,7 @@
+hostkit_client_databases:
+    pattern:  /databases
+    defaults: { _controller: HostkitClientBundle:Databases:databases }
+
+hostkit_client_database_user:
+    pattern:  /database_user
+    defaults: { _controller: HostkitClientBundle:Databases:databaseUser }

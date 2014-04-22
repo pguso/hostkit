@@ -1,0 +1,3 @@
+hostkit_reseller_overview:
+    pattern:  /reseller/overview
+    defaults: { _controller: HostkitClientBundle:Reseller:overview }

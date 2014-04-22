@@ -1,0 +1,63 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+{% form_theme form 'HostkitAdminBundle:Default:fields-large.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">Site Management</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+				<div class="padd">
+                        {% if modify is defined %}
+                            <h6>Modify Site</h6>
+                        {% else %}
+                            <h6>Site Details</h6>
+                        {% endif %}
+                        <hr class="margin-top-bottom" />
+                        {% if error is defined %}
+                            <div class="errormsg">{{ error }}</div>
+                        {% endif %}
+                        <form action="" method="post" class="form-horizontal row-fluid" {{ form_enctype(form) }}>
+
+
+                            {{ form_rest(form) }}
+                            <hr class="margin-top-bottom" />
+                            <div class="form-group">
+                                <div class="col-lg-offset-1 col-lg-9">
+                                    {% if modify is defined %}
+                                        <button class="btn btn-success" type="submit">Update Site</button>
+                                    {% else %}
+                                        <button class="btn btn-success" type="submit">Add new Site</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+				
+				<div class="widget-foot">
+                        <a href="{{ path('hostkit_xs_cms_site_list') }}">
+                            <button class="btn btn-info">Back to Site overview</button>
+                        </a>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+	
+	
+	
+{% endblock %}

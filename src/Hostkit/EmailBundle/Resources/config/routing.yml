@@ -1,0 +1,23 @@
+hostkit_xs_email_preview:
+    pattern:  /admin/email/show/{name}
+    defaults: { _controller: HostkitEmailBundle:Default:index }
+
+hostkit_xs_email_send:
+    pattern:  /admin/email/send/{name}
+    defaults: { _controller: HostkitEmailBundle:Default:send }
+
+hostkit_xs_email_add:
+    pattern:  /admin/email/add
+    defaults: { _controller: HostkitEmailBundle:Default:add }
+
+hostkit_xs_email_modify:
+    pattern:  /admin/email/modify/{id}
+    defaults: { _controller: HostkitEmailBundle:Default:modify }
+
+hostkit_xs_email_list:
+    pattern:  /admin/email/list
+    defaults: { _controller: HostkitEmailBundle:Default:list }
+
+hostkit_xs_email_delete:
+    pattern:  /admin/email/delete/{emailId}
+    defaults: { _controller: HostkitEmailBundle:Default:delete }

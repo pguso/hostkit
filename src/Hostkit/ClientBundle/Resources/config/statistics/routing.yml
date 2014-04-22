@@ -1,0 +1,4 @@
+hostkit_client_last_visitors:
+    pattern:  /last_visitors
+    defaults: { _controller: HostkitClientBundle:Statistics:lastVisitors }
+

@@ -1,0 +1,206 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+
+{% block title %}Admin Interface - cPanel Connect Account Detail{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">cPanel Account Details</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content">
+                    {% if error is defined %}
+                        <div class="errormsg">{{ error }}</div>
+                    {% endif %}
+
+                    <div class="col-md-12" style="padding: 0">
+                        <table class="table table-striped table-bordered table-hover"
+                               style="border-top: 1px solid #ddd; border-left: 1px solid #ddd;">
+                            <tbody>
+                            <tr>
+                                <td>Backup</td>
+                                <td>{{ account.backup }}</td>
+                            </tr>
+                            <tr>
+                                <td>Disklimit</td>
+                                <td>{{ account.disklimit }}</td>
+                            </tr>
+                            <tr>
+                                <td>Diskused</td>
+                                <td>{{ account.diskused }}</td>
+                            </tr>
+                            <tr>
+                                <td>Domain</td>
+                                <td>{{ account.domain }}</td>
+                            </tr>
+                            <tr>
+                                <td>E-Mail Address</td>
+                                <td>{{ account.email }}</td>
+                            </tr>
+                            <tr>
+                                <td>IP Address</td>
+                                <td>{{ account.ip }}</td>
+                            </tr>
+                            <tr>
+                                <td>Locked</td>
+                                {% if account.is_locked == 1 %}
+                                    <td>Yes</td>
+                                {% else %}
+                                    <td>No</td>
+                                {% endif %}
+                            </tr>
+                            <tr>
+                                <td>Legacy Backup</td>
+                                <td>{{ account.legacy_backup }}</td>
+                            </tr>
+                            <tr>
+                                <td>Failed or deferred email messages</td>
+                                <td>{{ account.max_defer_fail_percentage }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Email per hour</td>
+                                <td>{{ account.max_email_per_hour }}</td>
+                            </tr>
+                            <tr>
+                                <td>Addon Domains</td>
+                                <td>{{ account.maxaddons }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. FTP</td>
+                                <td>{{ account.maxftp }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Mailing Lists</td>
+                                <td>{{ account.maxlst }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Parked Domains</td>
+                                <td>{{ account.maxparked }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. E-Mail Accounts</td>
+                                <td>{{ account.maxpop }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Databases</td>
+                                <td>{{ account.maxsql }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. Subdomains</td>
+                                <td>{{ account.maxsub }}</td>
+                            </tr>
+                            <tr>
+                                <td>Max. defer fail</td>
+                                <td>{{ account.min_defer_fail_to_trigger_protection }}</td>
+                            </tr>
+                            <tr>
+                                <td>Owner</td>
+                                <td>{{ account.owner }}</td>
+                            </tr>
+                            <tr>
+                                <td>Partition</td>
+                                <td>{{ account.partition }}</td>
+                            </tr>
+                            <tr>
+                                <td>Package</td>
+                                <td>{{ account.plan }}</td>
+                            </tr>
+                            <tr>
+                                <td>Shell Access</td>
+                                {% if account.shell == 1 %}
+                                    <td>Yes</td>
+                                {% else %}
+                                    <td>No</td>
+                                {% endif %}
+                            </tr>
+                            <tr>
+                                <td>Created Date</td>
+                                <td>{{ account.startdate }}</td>
+                            </tr>
+                            <tr>
+                                <td>Suspended</td>
+                                {% if account.suspended == 1 %}
+                                    <td>Yes</td>
+                                {% else %}
+                                    <td>No</td>
+                                {% endif %}
+                            </tr>
+                            <tr>
+                                <td>Suspended Reason</td>
+                                <td>{{ account.suspendreason }}</td>
+                            </tr>
+                            <tr>
+                                <td>Theme</td>
+                                <td>{{ account.theme }}</td>
+                            </tr>
+                            <tr>
+                                <td>User</td>
+                                <td>{{ account.user }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-foot">
+                    <a href="{{ path('hostkit_xs_cpanel_accounts_overview') }}">
+                        <button class="btn btn-info">Back to Account overview</button>
+                    </a>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="widget">
+
+                <div class="widget-head">
+                    <div class="pull-left">cPanel Account Statistic</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="widget-content" style="padding: 20px 0 20px 60px">
+                    <div class="col-md-2">
+                        <div id="webspace-stat" data-dimension="190" data-text="{{ account.diskused|number_format }} MB"
+                             data-info="Disk Usage"
+                             data-width="14" data-fontsize="19"
+                             data-fgcolor="#61a9dc" data-bgcolor="#eee"
+                             data-total="{{ account.disklimit|number_format(0, '', '') }}"
+                             data-part="{{ account.diskused|number_format }}" data-border="inline" data-icon="hdd"
+                             data-icon-size="24" data-icon-color="#ccc"></div>
+                    </div>
+                    <div style="clear: both"></div>
+                    <div class="col-md-2">
+                        <div id="client-stat" data-dimension="190" data-text="{{ bw_used }} MB" data-info="Traffic Used"
+                             data-width="14" data-fontsize="19"
+                             data-percent="46" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-total="{{ bw_total }}"
+                             data-part="{{ bw_used }}" data-border="inline" data-icon="clock-o"
+                             data-icon-size="24" data-icon-color="#ccc"></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

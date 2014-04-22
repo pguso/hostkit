@@ -1,0 +1,7 @@
+hostkit_setup_homepage:
+    pattern:  /setup
+    defaults: { _controller: HostkitSetupBundle:Default:index }
+
+hostkit_setup_homepage_test:
+    pattern:  /installer
+    defaults: { _controller: HostkitSetupBundle:Default:index }

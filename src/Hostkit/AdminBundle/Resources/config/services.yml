@@ -1,0 +1,7 @@
+parameters:
+#    hostkit_xs_admin.example.class: Hostkit\AdminBundle\Example
+
+services:
+#    hostkit_xs_admin.example:
+#        class: %hostkit_xs_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

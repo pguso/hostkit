@@ -1,0 +1,185 @@
+<?php
+
+
+namespace Hostkit\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="domain_pricing")
+ */
+class DomainPricing {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="integer", length=100, nullable=false)
+     */
+    protected $period;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=false)
+     */
+    protected $tld;
+	
+	/**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $price;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $price_euro;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $price_usd;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=false)
+     */
+    protected $cost;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * Set period
+     *
+     * @param integer $period
+     * @return DomainPricing
+     */
+    public function setPeriod($period) {
+        $this->period = $period;
+
+        return $this;
+    }
+
+    /**
+     * Get period
+     *
+     * @return integer
+     */
+    public function getPeriod() {
+        return $this->period;
+    }
+
+    /**
+     * Set tld
+     *
+     * @param string $tld
+     * @return DomainPricing
+     */
+    public function setTld($tld) {
+        $this->tld = $tld;
+
+        return $this;
+    }
+
+    /**
+     * Get tld
+     *
+     * @return string
+     */
+    public function getTld() {
+        return $this->tld;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     * @return DomainPricing
+     */
+    public function setPrice($price) {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice() {
+        return $this->price;
+    }
+
+    /**
+     * Set cost
+     *
+     * @param string $cost
+     * @return DomainPricing
+     */
+    public function setCost($cost) {
+        $this->cost = $cost;
+
+        return $this;
+    }
+
+    /**
+     * Get cost
+     *
+     * @return string
+     */
+    public function getCost() {
+        return $this->cost;
+    }
+
+    /**
+     * Set price_euro
+     *
+     * @param string $priceEuro
+     * @return DomainPricing
+     */
+    public function setPriceEuro($priceEuro) {
+        $this->price_euro = $priceEuro;
+
+        return $this;
+    }
+
+    /**
+     * Get price_euro
+     *
+     * @return string
+     */
+    public function getPriceEuro() {
+        return $this->price_euro;
+    }
+
+    /**
+     * Set price_usd
+     *
+     * @param string $priceUsd
+     * @return DomainPricing
+     */
+    public function setPriceUsd($priceUsd) {
+        $this->price_usd = $priceUsd;
+
+        return $this;
+    }
+
+    /**
+     * Get price_usd
+     *
+     * @return string
+     */
+    public function getPriceUsd() {
+        return $this->price_usd;
+    }
+}

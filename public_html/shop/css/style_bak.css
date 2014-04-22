@@ -1,0 +1,788 @@
+/***
+*   General Styles
+*/
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: #e3e6e7 url(../images/background.png) repeat
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    border: none;
+    outline: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clr {
+    clear: both;
+}
+
+.fltl {
+    float: left;
+}
+
+.fltr {
+    float: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mar {
+    margin: 15px 0;
+}
+
+.about {
+    margin: 80px auto;
+    padding: 8px;
+    width: 260px;
+    font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+    color: #666;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    background: #eee;
+    background: rgba(250, 250, 250, 0.8);
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.about a {
+    color: #333;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-transition: background 0.1s;
+    -moz-transition: background 0.1s;
+    -o-transition: background 0.1s;
+    transition: background 0.1s;
+}
+
+.about a:hover {
+    text-decoration: none;
+    background: #fafafa;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.about-links {
+    height: 30px;
+}
+
+.about-links > a {
+    float: left;
+    width: 50%;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.about-author {
+    margin-top: 5px;
+}
+
+.about-author > a {
+    padding: 1px 3px;
+    margin: 0 -1px;
+}
+
+.container {
+    margin: 80px auto;
+    width: 640px;
+}
+
+.box, .admin-box {
+    background: #fff;
+    width: 360px;
+    min-height: 350px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.box-order {
+    background: #fff;
+    width: 640px;
+    position: relative;
+    margin: 0 auto 20px auto;
+    padding: 20px 0 0 0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.box h1, .box-order h1 {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0 0 0;
+    margin: -20px 0 21px 0;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px whitesmoke;
+}
+
+.box-order-content {
+    position: relative;
+    padding: 20px 20px 20px 40px;
+}
+
+.box-order h1 {
+    border-radius: 3px 3px 0 0;
+}
+
+.box h1 {
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+}
+
+.box p, .box-order p {
+    margin: 20px 0 0;
+    clear: both;
+}
+
+.box p:first-child, .box-order p:first-child {
+    margin-top: 0;
+}
+
+.box-order p input[type=radio], .box-order p label {
+    height: 20px;
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 20px 15px 0;
+    font-size: 14px;
+}
+
+.box input[type=text], .box input[type=password], .box input[type=email], .box-order input[type=text], .box-order input[type=password], .box-order input[type=email] {
+    width: 278px;
+}
+
+.box p.remember_me {
+    float: left;
+    line-height: 31px;
+}
+
+.box p.remember_me label {
+    font-size: 12px;
+    color: #777;
+    cursor: pointer;
+}
+
+.box p.remember_me input {
+    position: relative;
+    bottom: 1px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.box p.submit {
+    text-align: right;
+}
+
+.box-help {
+    margin: 20px 0;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px #2a85a1;
+}
+
+.box-help a {
+    color: #cce7fa;
+    text-decoration: none;
+}
+
+.box-help a:hover {
+    text-decoration: underline;
+}
+
+:-moz-placeholder {
+    color: #c9c9c9 !important;
+    font-size: 13px;
+}
+
+::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 13px;
+}
+
+input {
+    font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.client-order select {
+    margin: 5px;
+    padding: 0 0 0 10px;
+    width: 200px;
+    height: 34px;
+    color: #404040;
+    background: white;
+    border: 1px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border-color: #7dc9e2;
+    outline-color: #dceefc;
+    outline-offset: 0;
+}
+
+input[type=submit] {
+    padding: 0 18px;
+    height: 29px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #527881;
+    text-shadow: 0 1px #e3f1f1;
+    background: #cde5ef;
+    border: 1px solid;
+    border-color: #b4ccce #b3c0c8 #9eb9c2;
+    border-radius: 16px;
+    outline: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+    background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+    -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+input[type=submit]:active {
+    background: #cde5ef;
+    border-color: #9eb9c2 #b3c0c8 #b4ccce;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+    line-height: 34px;
+}
+
+#registerdomain .tld-input {
+    float: left;
+    width: 60px;
+    border-radius: 0 3px 3px 0;
+    margin: 0 20px 10px 0;
+}
+
+.password_strength {
+    padding: 5px 15px;
+    display: inline-block;
+    margin: 17px 0 -3px 15px;
+    border-radius: 3px;
+}
+.password_strength_1 {
+    background-color: #fcb6b1;
+}
+.password_strength_2 {
+    background-color: #fccab1;
+}
+.password_strength_3 {
+    background-color: #fcfbb1;
+}
+.password_strength_4 {
+    background-color: #dafcb1;
+}
+.password_strength_5 {
+    background-color: #bcfcb1;
+}
+
+/*
+*   Slider Style
+*/
+
+.slider-pkg {
+    height: 250px;
+    margin: 25px 50px 0 4px !important;
+    float: left;
+}
+
+.pkg-details {
+    margin: 50px 0 0 5px;
+    float: left;
+}
+
+/* List style */
+
+ul {
+    margin: 12px;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 0 12px 0;
+    font-size: .9em;
+    line-height: 1em;
+}
+
+body:nth-of-type(1) ul li {
+    list-style-type: none;
+    padding: 0 0 0 45px;
+    position: relative;
+}
+
+body:nth-of-type(1) ul li:before {
+    /*fill it with a blank space*/
+    content: "\00a0";
+
+    /*make it a block element*/
+    display: block;
+
+    /*adding an 8px round border to a 0x0 element creates an 8px circle*/
+    border: solid 9px #000;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    height: 0;
+    width: 0;
+
+    /*Now position it on the left of the list item, and center it vertically
+    (so that it will work with multiple line list-items)*/
+    position: absolute;
+    left: 7px;
+    top: 40%;
+    margin-top: -8px;
+}
+
+body:nth-of-type(1) ul li:after {
+    /*Add another block-level blank space*/
+    content: "\00a0";
+    display: block;
+
+    /*Make it a small rectangle so the border will create an L-shape*/
+    width: 3px;
+    height: 6px;
+
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+
+    /*Position it on top of the circle*/
+    position: absolute;
+    left: 14px;
+    top: 40%;
+    margin-top: -4px;
+
+    /*Rotate the L 45 degrees to turn it into a checkmark*/
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+/*
+*   Status Message
+*/
+#msg {
+    background: url(../images/loader.gif) no-repeat;
+    width: 220px;
+    min-height: 19px;
+    margin: 5px 0 15px 45px;
+    color: green;
+    font-weight: bold;
+}
+
+.chooser select {
+    float: right;
+}
+
+.chooser p {
+    line-height: 30px;
+    clear: both;
+}
+
+/* form */
+.input-append .add-on:last-child, .input-append .btn:last-child, .input-append .btn-group:last-child > .dropdown-toggle {
+    background: #EFF4F7 !important;
+    border-radius: 0 3px 3px 0 !important;
+    height: 40px;
+    border: none !important;
+    padding: 6px 5px 0 0 !important;
+    line-height: 32px;
+}
+
+/* admin */
+
+.admin-box nav {
+    width: 170px;
+    float: left;
+}
+
+.admin-box nav a {
+    width: 170px;
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 10px 0;
+    margin: 10px 0 0 0;
+}
+
+.admin-box .content {
+    float: left;
+    margin: 0 0 0 30px;
+    position: relative;
+}
+
+.admin-box .content .top-box {
+    background: #eee;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    padding: 5px 15px;
+    margin: -20px 0 0 0;
+}
+
+.admin-box .content .top-box a:nth-child(1) {
+    border-right: 1px solid #999;
+    margin-right: 8px;
+    padding-right: 12px;
+}
+
+.admin-box h5 {
+    width: 100%;
+    font-size: 21px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E5E5E5;
+    font-weight: normal;
+}
+
+#page {
+    width: 720px;
+    margin: 35px 0 0 30px;
+}
+
+#page h2 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+#page .fltl {
+    float: left;
+    width: 300px;
+    margin: 0 40px 40px 0;
+}
+
+#page .edit-form {
+
+}
+
+.btn {
+
+}
+
+/**** order **********/
+.show {
+    background: url(../images/icons/show.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin: 9px 9px 0 0;
+    cursor: pointer;
+}
+
+.hide {
+    background: url(../images/icons/hide.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin: 9px 9px 0 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.box-order section {
+
+}
+
+.box-order table {
+    width: 98%;
+    margin: 15px auto;
+}
+
+.box-order table tr th, .box-order table tr td {
+    padding: 1px 4px;
+}
+
+.box-order table tr {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    margin: 5px 0;
+    text-align: left;
+    line-height: 30px;
+}
+
+.box-order table tr td:nth-child(1), th:nth-child(1) , td:nth-child(2), th:nth-child(2), td:nth-child(3), th:nth-child(3) {
+    border-right: 1px solid #eee;
+}
+
+.box-order #amount {
+    float: right;
+    margin: 10px 5px 20px 0;
+    font-weight: bold;
+}
+
+.order-button {
+    width: 185px;
+    float: left;
+}
+
+.box-order .label_check,
+.box-order .label_radio {
+    padding-left: 34px;
+    clear: both;
+    margin: 10px 0;
+}
+
+.box-order .label_radio {
+    background: url(images/radio-off.png) no-repeat;
+}
+
+.box-order .label_check {
+    background: url(images/check-off.png) no-repeat;
+}
+
+.box-order label.c_on {
+    background: url(images/check-on.png) no-repeat;
+}
+
+.box-order label.r_on {
+    background: url(images/radio-on.png) no-repeat;
+}
+
+.box-order .label_check input,
+.box-order .label_radio input {
+    position: absolute;
+    left: -9999px;
+}
+
+.box-order .clearfix {
+    margin: 10px 0;
+}
+
+.box-order .radio {
+    margin: 0 0 30px 0;
+}
+
+.box-order input {
+    background: none;
+    width: 299px;
+    height: 35px;
+    border: 1px solid #e6e6e6;
+    float: left;
+    margin: 0 20px 0 21px;
+}
+
+.box-order .checkout input {
+    width: 350px;
+    margin: 10px 0;
+}
+
+textarea {
+    width: 550px;
+    min-height: 180px;
+    margin: 10px 0;
+}
+
+.box-order .bootstrap-select:not([class*="span"]) {
+    width: 120px;
+    float: left;
+
+}
+
+#registerdomain .btn-inverse {
+    margin: 0 0 0 22px;
+}
+
+.box-order .btn-inverse {
+    padding: 6px 15px;
+}
+
+.bootstrap-select .btn {
+    width: 120px;
+    height: 45px;
+}
+
+.box-result {
+
+}
+
+.result {
+    background: #fff;
+    height: 30px;
+    padding: 25px 15px;
+}
+
+.result .icon-ok {
+    margin: 0 8px 0 0;
+}
+
+.result .price {
+    margin: 0 0 0 50px;
+    color: #f44800;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.result .price .small {
+    color: #999;
+    font-size: 12px;
+}
+
+.result .btn-inverse {
+    margin: 0 0 0 50px;
+}
+
+.order-button .btn-inverse {
+    padding: 8px 30px;
+}
+
+/**** billing site ***/
+.box-header {
+    background: #f4f3f1; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f3f1 0%, #e0e0e0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f3f1), color-stop(100%, #e0e0e0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f3f1 0%, #e0e0e0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f3f1 0%, #e0e0e0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f3f1 0%, #e0e0e0 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f4f3f1 0%, #e0e0e0 100%); /* W3C */
+    width: 100%;
+    height: 30px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f3f1', endColorstr='#e0e0e0', GradientType=0); /* IE6-9 */
+    -moz-box-shadow: inset 0px -1px 1px 0px #999;
+    -webkit-box-shadow: inset 0px -1px 1px 0px #999;
+    box-shadow: inset 0px -1px 1px 0px #999;
+    padding: 10px 0;
+}
+
+.content-box {
+    min-height: 250px;
+    border: 1px solid #e0e0e0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+/* form elements */
+ui.dropdown-menu {
+    top: 28% !important;
+}
+
+.loader {
+    background: url(../images/ajax-loader.gif) no-repeat;
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: -150px 0 0 250px;
+    position: absolute;
+}
+
+#registerdomain label {
+    width: 5px;
+    font-weight: bold;
+    float: left;
+    margin: 26px 20px 0 0;
+    font-size: 19px;
+}
+
+.error_text {
+    font-size: 48px;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 2px 1px 1px #999;
+    letter-spacing: -2px;
+    margin: 10px;
+}
+
+label.error {
+    color: #ff0000;
+    margin: 8px 0 0 10px !important;
+}
+
+input.error {
+    border: 1px solid #ff0000;
+}
+
+
+
+
+

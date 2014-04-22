@@ -1,0 +1,27 @@
+hostkit_client_files:
+    pattern:  /files
+    defaults: { _controller: HostkitClientBundle:Files:index }
+
+hostkit_client_filemanager:
+    pattern:  /filemanager
+    defaults: { _controller: HostkitClientBundle:Files:fileManager }
+
+hostkit_client_add_file:
+    pattern:  /add_file
+    defaults: { _controller: HostkitClientBundle:Files:addFile }
+
+hostkit_client_add_folder:
+    pattern:  /add_folder
+    defaults: { _controller: HostkitClientBundle:Files:addFolder }
+
+hostkit_client_files_webspace:
+    pattern:  /files_webspace
+    defaults: { _controller: HostkitClientBundle:Files:webspace }
+
+hostkit_client_files_ftp:
+    pattern:  /files_ftp
+    defaults: { _controller: HostkitClientBundle:Files:ftp }
+
+hostkit_client_files_backup:
+    pattern:  /files_backup
+    defaults: { _controller: HostkitClientBundle:Files:backup }

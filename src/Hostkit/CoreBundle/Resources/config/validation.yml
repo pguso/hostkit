@@ -1,0 +1,12 @@
+Hostkit\CoreBundle\Entity\Client:
+    properties:
+        email:
+            - Email:
+                message: The email "{{ value }}" is not a valid email.
+                checkMX: true
+
+Hostkit\CoreBundle\Entity\Settings:
+    properties:
+        logo:
+            - File:
+                maxSize: 6000000

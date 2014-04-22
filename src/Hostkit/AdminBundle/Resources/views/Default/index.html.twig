@@ -1,0 +1,166 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/fullcalendar.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/prettyPhoto.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/rateit.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap-datetimepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/jquery.cleditor.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap-switch.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/jquery.datatables.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/jquery.circliful.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/jquery.jqplot.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/widgets.css') }}">
+
+    <!--[if lt IE 9]>
+    <script src="{{ asset('admin/js/html5shim.js') }}"></script>
+    <![endif]-->
+{% endblock %}
+
+
+{% block body %}
+    <div class="content">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
+
+            <ul id="nav">
+                <li><a href="{{ path('hostkit_xs_admin_homepage') }}"><i class="icon-home"></i> Dashboard</a>
+                </li>
+                <li class="has_sub"><a href="#"><i class="icon-chain"></i> cPanel Connect <span class="pull-right"><i
+                                    class="icon-chevron-right"></i></span></a>
+                    <ul>
+                        <li><a href="{{ path('hostkit_xs_cpanel_packages_overview') }}">Packages</a></li>
+                        <li><a href="{{ path('hostkit_xs_cpanel_accounts_overview') }}">Accounts</a></li>
+                    </ul>
+                </li>
+                <li class="has_sub"><a href="#"><i class="icon-shopping-cart"></i> Products <span class="pull-right"><i
+                                    class="icon-chevron-right"></i></span></a>
+                    <ul>
+                        <li><a href="{{ path('hostkit_xs_hosting_overview') }}">Hosting Packages</a></li>
+                        <li><a href="{{ path('hostkit_xs_domains_overview') }}">Domains</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('hostkit_xs_clients_overview') }}"><i class="icon-users"></i> Clients</a></li>
+                <li><a href="{{ path('hostkit_xs_server_overview') }}"><i class="icon-hdd"></i> Server</a></li>
+                <li class="has_sub"><a href="#"><i class="icon-comments"></i> Support <span class="pull-right"><i
+                                    class="icon-chevron-right"></i></span></a>
+                    <ul>
+                        <li><a href="{{ path('hostkit_xs_admin_support_tickets') }}">Support Tickets</a></li>
+                        <li><a href="{{ path('hostkit_xs_admin_support_faq') }}">FAQ System</a></li>
+                    </ul>
+                </li>
+				<li class="has_sub"><a href="#"><i class="icon-puzzle-piece"></i> CMS <span class="pull-right"><i
+                                    class="icon-chevron-right"></i></span></a>
+                    <ul>
+                        <li><a href="{{ path('hostkit_xs_cms_site_list') }}">Pages</a></li>
+						<li><a href="{{ path('hostkit_xs_email_list') }}">Email Templates</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('hostkit_xs_admin_settings') }}"><i class="icon-cogs"></i> Settings</a></li>
+				<li><a href="/logout" style="color: orange; font-weight: bold;"><i class="icon-unlock"></i> Logout</a></li>
+            </ul>
+        </div>
+
+
+        <div class="mainbar">
+
+            <div class="page-head">
+                {% if title.name is defined %}
+                    <h2 class="pull-left"><i class="{{ title.icon }}"></i> {{ title.name }}</h2>
+                {% else %}
+                    <h2 class="pull-left"><i class="icon-home"></i> Dashboard</h2>
+                {% endif %}
+
+                <div class="clearfix"></div>
+
+            </div>
+
+            <div class="matter">
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Copyright info -->
+                        <p class="copy">Copyright &copy; 2013 | <a href="http://hostkit.de">Hostkit / Software</a> All
+                            rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('admin/js/jquery.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery-ui-1.9.2.custom.min.js') }}"></script>
+    <script src="{{ asset('admin/js/fullcalendar.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.rateit.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.prettyPhoto.js') }}"></script>
+
+    <script src="{{ asset('admin/js/excanvas.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.flot.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.flot.resize.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.flot.pie.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.flot.stack.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.jqplot.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.pieRenderer.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.donutRenderer.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.barRenderer.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.categoryAxisRenderer.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.pointLabels.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.cursor.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.highlighter.min.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins/jqplot.dateAxisRenderer.min.js') }}"></script>
+
+    <script src="{{ asset('admin/js/jquery.noty.js') }}"></script>
+    <script src="{{ asset('admin/js/themes/default.js') }}"></script>
+    <script src="{{ asset('admin/js/layouts/bottom.js') }}"></script>
+    <script src="{{ asset('admin/js/layouts/topRight.js') }}"></script>
+    <script src="{{ asset('admin/js/layouts/top.js') }}"></script>
+
+    <script src="{{ asset('admin/js/sparklines.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.cleditor.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap-switch.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.tablesorter.min.js') }}"></script>
+	<script src="{{ asset('admin/js/ckeditor.js') }}"></script>
+    <script src="{{ asset('admin/js/filter.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.circliful.min.js') }}"></script>
+	<script src="{{ asset('admin/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
+    <script src="{{ asset('admin/js/charts.js') }}"></script>
+	<script>
+	  $( document ).ready( function() {
+				if($( '#site_content' ).length > 0) {
+						CKEDITOR.replace( 'site_content', {
+							extraPlugins: 'pricingtable'
+						});
+				}
+				
+				if($( '#email_contentTop' ).length > 0) {
+						CKEDITOR.replace('email_contentTop');
+				}
+				
+			} );
+	</script>
+{% endblock %}

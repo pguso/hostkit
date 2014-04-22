@@ -1,0 +1,243 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+
+{% block content %}
+
+
+            <!--content starts-->
+				<div class="content sortable ui-sortable">
+				<!-- something like this: http://www.zamfoo.com/tiki-index.php -->
+
+        <div class="box span3">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Account Funktions</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="{{ path('hostkit_client_email_list') }}">    
+                            <i class="ico-box ico-arrow"></i>
+                            Manage Alpha Reseller                                    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_email_filter') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Manage Master Reseller
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_email_forwarders') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Profile                                   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_email_mxs') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Backup Data
+                        </a>
+                    </li>
+                </ul>                  
+            </div>
+        </div>
+
+        <div class="box span3" style="">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Dateien</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="{{ path('hostkit_client_files') }}">    
+                            <i class="ico-box ico-arrow"></i>
+                            Dateiverwaltung                                    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_files_webspace') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Belegter Speicherplatz                                  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_files_ftp') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            FTP Konten                               
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_files_backup') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Sicherungsassistent                                  
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+
+        <div class="box span3">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Domains</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="{{ path('hostkit_client_subdomains') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Subdomains                                   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_addondomains') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Addon Domains
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_redirects') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Umleitungen                                   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_dns') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            DNS Zonen
+                        </a>
+                    </li>
+                </ul>                  
+            </div>
+        </div>
+
+        <div class="box span3">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Datenbanken</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="{{ path('hostkit_client_databases') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Datenbanken                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('hostkit_client_database_user') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Datenbank User
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            phpMyAdmin                                
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Datenbank Tools
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+        
+        <div class="box span3">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Statistiken</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="{{ path('hostkit_client_last_visitors') }}">
+                            <i class="ico-box ico-arrow"></i>
+                            Letzte Besucher                               
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Bandbreite
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Webalizer                                   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Awstats
+                        </a>
+                    </li>
+                </ul>                  
+            </div>
+        </div>
+
+        <div class="box span3" style="">
+            <div data-original-title="" class="box-header well">
+                <h2><i class="icon-th"></i> Einstellungen</h2>
+                <div class="box-icon">
+                    <a class="btn btn-minimize btn-round" href="#"><i class="icon-chevron-up"></i></a>
+                    <a class="btn btn-close btn-round" href="#"><i class="icon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+                <ul class="dashboard-list">
+                    <li>
+                        <a href="#">    
+                            <i class="ico-box ico-arrow"></i>
+                            Zahlungsdetails                             
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Kontaktinformationen                             
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Kennwort �ndern                         
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="ico-box ico-arrow"></i>
+                            Userverwaltung                                 
+                        </a>
+                    </li>
+                </ul>                 
+            </div>
+        </div>
+
+    </div>
+
+            <!--content ends-->
+
+        
+{% endblock %}

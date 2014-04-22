@@ -1,0 +1,21 @@
+hostkit_xs_domain_availability:
+    pattern:  /check/domain
+    defaults: { _controller: HostkitCoreBundle:Domain:checkDomainAvailability }
+
+hostkit_xs_vat:
+    pattern:  /vat
+    defaults: { _controller: HostkitCoreBundle:Payment:vat }
+
+hostkit_xs_test:
+    pattern:  /test
+    defaults: { _controller: HostkitCoreBundle:Domain:index }
+
+hostkit_xs_domain_test:
+    pattern:  /testdm
+    defaults: { _controller: HostkitCoreBundle:Domain:domainTest }
+
+hostkit_xs_cronjob:
+    pattern:  /cronjob
+    defaults: { _controller: HostkitCoreBundle:Default:cronjob }
+
+

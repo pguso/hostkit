@@ -1,0 +1,7 @@
+hostkit_client_hosting:
+    pattern:  /hosting
+    defaults: { _controller: HostkitClientBundle:Hosting:index }
+
+hostkit_client_hosting_config:
+    pattern:  /hosting/config/{packageId}
+    defaults: { _controller: HostkitClientBundle:Hosting:config }

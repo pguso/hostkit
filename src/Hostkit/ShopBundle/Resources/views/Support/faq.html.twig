@@ -1,0 +1,59 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+
+{% block content %}
+    <div class="container margin-top">
+        <div class="row row-faq">
+            <h3 class="heading">Frequently asked questions</h3>
+
+            <!-- Split button -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-primary">Filter by Category</button>
+			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			    <span class="caret"></span>
+			    <span class="sr-only">Toggle Dropdown</span>
+			  </button>
+			  <ul class="dropdown-menu" role="menu" id="faq-filter">
+			  	{% for faqCat in faqCategory %}
+			    	<li data-faq-category-filter="{{ faqCat.id }}"><a href="#">{{ faqCat.name }}</a></li>
+			    {% endfor %}
+			    <li class="divider"></li>
+			    <li data-faq-category-filter="0"><a href="#">Show All</a></li>
+			  </ul>
+			</div>
+			<div style="clear: both;"></div>
+
+            <hr />
+			
+			<div class="col-md-4">
+			{% if faq is iterable %}
+			{#<h4 class="heading-border"></h4>#}
+			<ul class="list-group faq-list">
+			{% for question in faq %}
+			  <li class="list-group-item" data-faq-question="{{ question.id }}">{{ question.question }}</li>
+			
+			{% endfor %}
+			</ul>
+			{% endif %}
+			  
+			  </div>
+			  <div class="col-md-8">
+			  
+			  <div class="panel panel-default">
+			  {% if faq[0] is defined %}
+				  <div class="panel-heading">
+				    <h3 class="panel-title">{{ faq[0].question }}</h3>
+				  </div>
+				  <div class="panel-body">
+				    {{ faq[0].answer|raw }}
+				  </div>
+				</div>
+				{% else %}
+			  <div>No Data available. </div>
+			  {% endif %}
+			  </div>
+			  
+			
+			</div>
+
+			
+			{% endblock %}

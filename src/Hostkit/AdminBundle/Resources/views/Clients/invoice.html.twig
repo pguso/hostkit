@@ -1,0 +1,115 @@
+{% extends 'HostkitAdminBundle:Default:index.html.twig' %}
+
+{% block title %}Admin Interface - Clients{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="widget-head">
+                    <div class="pull-left">Invoice</div>
+                    <div class="widget-icons pull-right">
+                        <a class="wminimize" href="#"><i class="icon-chevron-up"></i></a>
+                        <a class="wclose" href="#"><i class="icon-remove"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="widget-content">
+                    <div class="padd invoice">
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <h4>{{ settings.companyName }}</h4>
+                                <p>
+                                    {{ settings.companyAddress1 }}<br>
+                                    {{ settings.companyCountry }}, {{ settings.companyState }} - {{ settings.companyPostcode }}<br>
+                                    {{ settings.companyCountry }}
+                                </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4>{{ client.firstname }} {{ client.lastname }}</h4>
+                                <p>
+                                    {{ client.address1 }}<br>
+                                    {{ client.country }}, {{ client.state }} - {{ client.postcode }}<br>
+                                    {{ client.country }}
+                                </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4>Invoice</h4>
+                                <p>
+                                    Invoice No : {{ order.invoiceId }}<br>
+                                    Date : {{ order.orderDate }}<br>
+                                    Account No : {{ client.id }}
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <hr>
+                                <table class="table table-striped table-hover table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Service</th>
+                                        <th>Detail</th>
+                                        <th>Quantity</th>
+                                        <th>Unit Price</th>
+                                        <th>Tax</th>
+                                        <th>Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for orderItem in orderItems %}
+                                    <tr>
+                                        <td>{{ orderItem.id }}</td>
+                                        {% if orderItem.service == 3%}
+                                            <td>Hosting Package</td>
+                                        {% else %}
+                                            <td>Domain</td>
+                                        {% endif %}
+                                        {% if orderItem.service == 3%}
+                                            <td>{{ orderItem.packageId }}</td>
+                                        {% else %}
+                                            <td>{{ orderItem.details }}</td>
+                                        {% endif %}
+                                        <td>1</td>
+                                        <td>${{ orderItem.price|number_format(2, '.', ',') }}</td>
+                                        <td>{{ payment.vat }}%</td>
+                                        <td>${{ (orderItem.price + orderItem.price / 100 * payment.vat)|number_format(2, '.', ',') }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>${{ total|number_format(2, '.', ',') }}</strong></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="widget-foot">
+                        <a href="{{  path('hostkit_xs_client_detail', {'clientId': client.id }) }}">
+                            <button class="btn btn-info">Back to Client Detail view</button>
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

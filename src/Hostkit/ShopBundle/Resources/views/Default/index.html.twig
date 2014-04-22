@@ -1,0 +1,90 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('shop/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('shop/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('shop/css/font-awesome.min.css') }}" type="text/css" rel="stylesheet"/>
+	<link href="{{ asset('client/css/interface.css') }}" type="text/css" rel="stylesheet"/>
+	<link href="{{ asset('client/css/jquery.circliful.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('admin/css/magnific-popup.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('shop/css/main.css') }}" type="text/css" rel="stylesheet"/>
+	
+	<script src="{{ asset('/shop/js/vendor/jquery.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('client/js/jquery.circliful.min.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+        to improve your experience.</p>
+    <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ path('hostkit_xs_shop_homepage') }}">Home</a></li>
+                    {% if twigVars.showPackages == true %}
+                        <li><a href="{{ path('hostkit_xs_shop_hosting_overview') }}">Hosting</a></li>
+                    {% endif %}
+                    {% if twigVars.showFaq == true %}
+                        <li><a href="/faq">FAQ</a></li>
+                    {% endif %}
+                    <li><a href="/support/add">Support & Contact</a></li>
+					{% if sites is defined %}
+						{% for site in sites %} 
+							{% if site.menu == 1 %}
+								<li><a href="/p/{{ site.name }}">{{ site.name|capitalize }}</a></li>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+                </ul>
+
+                <ul class="nav navbar-nav actions">
+                    <li><a href="{{ path('hostkit_client_homepage') }}"><span class="fa fa-user"></span> Login</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+    <hr>
+
+	<footer>
+		<p>&copy; 2013. All rights reserved.
+		<span class="footer_nav">
+		{% if sites is defined %}
+			{% for site in sites %} 
+				{% if site.menu == 2 %}
+					<a href="/p/{{ site.name }}">{{ site.name|capitalize }}</a>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+		</span>
+		</p>
+
+	</footer>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('/shop/js/vendor/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/shop/js/vendor/bootstrap-select.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('shop/js/vendor/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('/shop/js/main.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('shop/js/domain.js') }}"></script>
+    <script src="{{ asset('shop/js/order.js') }}"></script>
+{% endblock %}

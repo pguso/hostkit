@@ -1,0 +1,48 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+
+{% block content %}
+    <div class="container padding-top">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div id="searchbox">
+                <h3>Search for your desired Domainname!</h3>
+
+                <form>
+                    <input type="text" placeholder="yourdomain.com"/><br/>
+                    <button class="btn btn-custom">Search Domain</button>
+                </form>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <h3>Domain Pricing</h3>
+            <table class="table table-bordered table-hover table-striped" style="border-left: 1px solid #ddd; border-radius: 0;">
+                <thead>
+                <tr>
+                    <th>TLD</th>
+                    <th>{{ 'period'|trans }}</th>
+                    <th>{{ 'price'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if domains %}
+                    {% for domain in domains %}
+                        <tr>
+                            <td>{{ domain.tld }}</td>
+                            <td>{{ domain.period }} Months</td>
+                            {% if app.request.locale == 'de' %}
+                                <td>{{ domain.priceEuro }} €</td>
+                            {% else %}
+                                <td>${{ domain.priceUsd }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+
+{% endblock %}

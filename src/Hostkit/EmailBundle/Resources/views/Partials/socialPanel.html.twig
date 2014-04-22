@@ -1,0 +1,82 @@
+<table class="row footer">
+    <tr>
+		
+        <td class="wrapper">
+			{% if settings.facebook != '' and settings.twitter != '' and settings.google != '' %}
+            <table class="six columns">
+                <tr>
+                    <td class="left-text-pad">
+                        {% block socialPanelLeft %}
+                            <h5>Connect With Us:</h5>
+                            {% block socialPanelFacbook %}
+							{% if settings.facebook != '' %}
+                            <table class="tiny-button facebook">
+                                <tr>
+                                    <td>
+                                        {% block socialPanelFacbookLink %}
+                                        <a href="#">Facebook</a>
+                                        {% endblock %}
+                                    </td>
+                                </tr>
+                            </table>
+							{% endif %}
+                            {% endblock %}
+							{% if settings.twitter != '' %}
+                            <br>
+                            {% block socialPanelTwitter  %}
+                            <table class="tiny-button twitter">
+                                <tr>
+                                    <td>
+                                        {% block socialPanelTwitterLink %}
+                                        <a href="#">Twitter</a>
+                                        {% endblock %}
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endblock %}
+							{% endif %}
+							
+							{% if settings.google != '' %}
+                            <br>
+                            {% block socialPanelGPlus %}
+                            <table class="tiny-button google-plus">
+                                <tr>
+                                    <td>
+                                        {% block socialPanelGPlusLink %}
+                                        <a href="#">Google +</a>
+                                        {% endblock %}
+                                    </td>
+                                </tr>
+                            </table>
+                            {% endblock %}
+							{% endif %}
+                        {% endblock %}
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+{% endif %}
+        </td>
+		
+        <td class="wrapper last">
+
+            <table class="six columns">
+                <tr>
+                    <td class="last right-text-pad">
+                        {% block contentFooterRight %}
+                            <h5>Contact Info:</h5>
+							{% if settings.companyPhone != '' %}
+                            <p>Phone: {{ settings.companyPhone }}</p>
+							{% endif %}
+							{% if settings.companyEmail != '' %}
+                            <p>Email: <a href="mailto:{{ settings.companyEmail }}">{{ settings.companyEmail }}</a></p>
+							{% endif %}
+                        {% endblock %}
+                    </td>
+                    <td class="expander"></td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>

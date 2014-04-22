@@ -1,0 +1,44 @@
+{% extends 'HostkitClientBundle:Default:index.html.twig' %}
+
+{% block clientcontent %}
+    <section class="col-md-8" id="colorNav">
+        <div class="content-box">
+            <h3>E-Mail Accounts</h3>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Used</th>
+                    <th>Webmail</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if mailAccounts is empty %}
+                    <tr>
+                        <td colspan="4">No Accounts set.</td>
+                    </tr>
+                {% else %}
+                    {% for mailAccount in mailAccounts %}
+                        <tr>
+                            <td>{{ mailAccount.emailAddress }}</td>
+                            <td>{{ mailAccount.status|lower }}</td>
+                            <td>{{ mailAccount.percentageQuotaUsage }}%</td>
+                            <td><a href="{{ mailAccount.accountSettings.webmailUrl }}" target="_blank"> {{ mailAccount.accountSettings.webmailUrl }} </a></td>
+                        </tr>
+                    {% endfor %}
+
+                {% endif %}
+                </tbody>
+            </table>
+
+        </div>
+        <br /><br />
+        <div class="divider-line-narrow"></div>
+        <div class="content-footer">
+            <a href="{{ path('hostkit_client_domains_config', { domainId: domainId }) }}"><span></span> Back to config site</a>
+            <a href="{{ path('hostkit_client_domains_mail_add', { domainId: domainId }) }}"><span></span> Add new Account</a>
+        </div>
+    </section>
+{% endblock %}

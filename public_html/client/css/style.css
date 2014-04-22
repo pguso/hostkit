@@ -1,0 +1,413 @@
+img, a {
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.clr {
+    clear: both;
+}
+
+.flt_r {
+    float: right;
+}
+
+header ul li {
+    float: left;
+}
+
+header {
+    border-bottom: 1px solid #DEDEDE;
+    height: 65px;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 15px;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+header ul {
+    float: right;
+}
+
+.clients {
+    width: 150px;
+    height: 20px;
+    padding: 0 20px 1px 0;
+    float: right;
+    margin: 0;
+    background: #555;
+    opacity: 0.6;
+    border-radius: 0 0 2px 2px;
+}
+
+.clients span {
+    float: right;
+}
+
+.clients span a {
+    color: #fff;
+}
+
+.clients span a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+#main_nav {
+    margin: 0 80px 0 0;
+}
+
+#main_nav li a {
+    font-size: 14px;
+    color: #317EAC;
+}
+
+#main_nav li {
+    margin: 15px 30px 0 0;
+}
+
+.social li {
+    margin: 15px 5px 0 0;
+}
+
+.small_boxes {
+    display: none;
+}
+
+.interface .breadcrumb {
+    margin: 0 0 18px 0;
+}
+
+.interface .span3 {
+    width: 240px !important;
+}
+
+.interface .span4 {
+    width: 240px !important;
+    min-height: 450px;
+}
+
+.interface .span12 {
+    width: 750px !important;
+}
+
+#main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#content {
+    width: 780px;
+    margin-left: 0;
+    float: left;
+}
+
+.content .span12 {
+    margin-left: 0 !important;
+}
+
+.sub-menu li {
+    padding: 0 0 5px 0;
+    margin: 0 0 0 10px;
+}
+
+.sub-menu li a {
+    padding: 5px 0;
+}
+
+.sub-menu i {
+    margin:  0 0 -2px 0;
+}
+
+.small_box {
+    -moz-box-sizing: border-box;
+    background: -moz-linear-gradient(center top , #FFFFFF, #FAFAFA) repeat-x scroll left top #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    color: #323232;
+    cursor: pointer;
+    display: inline-block;
+    height: 80px;
+    margin: 0 5px 15px 1px;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.small_box-icon {
+    background-position: center center;
+    border-right: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    height: 54px;
+    width: 43px;
+    padding: 25px 0 0 10px;
+}
+
+.small_box-content {
+    display: block;
+    margin-left: 49px;
+    padding: 8px 20px;
+    text-align: left;
+}
+
+.small_box-title {
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.small_box-value {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.icon_chart {
+    background: url("../images/icons/chart.png") no-repeat;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.ui-widget {
+    font-size: 0.95em !important;
+}
+
+#file-manager {
+    width: 725px;
+    min-height: 400px;
+    border: 1px solid #e3e3e3;
+    margin: 0 0 0 1px;
+}
+
+#file-manager .file-manager-header {
+    background: url("images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") repeat-x scroll 50% 50% #DDDDDD;
+    /*background: #f5f5f5;*/
+    width: 100%;
+    height: 50px;
+}
+
+#file-manager .file-manager-header .file-manager-icon-box {
+    width: 450px;
+    height: 30px;
+    margin: 8px 0 0 10px;
+    float: left;
+}
+
+#file-manager .file-manager-header .search {
+    background: #fff;
+    width: 200px;
+    height: 30px;
+    margin: 7px 10px 0 20px;
+    border: 1px solid #f5f5f5;
+    float: right;
+}
+
+#file-manager .file-manager-window {
+    width: 100%;
+    min-height: 350px;
+    border-top: 1px solid #e3e3e3;
+}
+
+#file-manager #file-manager-folders {
+    background: #f1f1f1;
+    width: 250px;
+    min-height: 350px;
+    float: left;
+    border-right: 1px solid #e3e3e3;
+    padding: 10px 0 10px 15px;
+}
+
+#file-manager #file-manager-files {
+    width: 400px;
+    min-height: 350px;
+    float: left;
+    padding: 10px 0 10px 15px;
+}
+
+.ico_bg {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #f5f5f5;
+    cursor: pointer;
+    float: left;
+    margin: 0 0 0 -2px;
+}
+
+.ico_bg:hover {
+    background: #fcfcfc;
+    border: solid 1px #f1f1f1;
+}
+
+.left_mrg {
+    margin-left: 5px !important;
+}
+
+.ico_bg .ico {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin: 7px 0 0 7px;
+}
+
+.ico_delete {
+    background: url(../images/icons/cross.png);
+}
+
+.ico_new_file {
+    background: url(../images/icons/page_add.png);
+}
+
+.ico_new_folder {
+    background: url(../images/icons/folder_add.png);
+}
+
+.ico_upload {
+    background: url(../images/icons/application_get.png);
+}
+
+.ico_download {
+    background: url(../images/icons/application_put.png);
+}
+
+.ico_copy {
+    background: url(../images/icons/page_copy.png);
+}
+
+.ico_cut {
+    background: url(../images/icons/cut.png);
+}
+
+.ico_paste {
+    background: url(../images/icons/page_white_paste.png);
+}
+
+.ico_move {
+    background: url(../images/icons/page_white_go.png);
+}
+
+.ico_edit {
+    background: url(../images/icons/page_white_edit.png);
+}
+
+.ico_rename {
+    background: url(../images/icons/textfield_rename.png);
+}
+
+.ico_change_permission {
+    background: url(../images/icons/key.png);
+}
+
+.ico_compress {
+    background: url(../images/icons/compress.png);
+}
+
+.ico_uncompress {
+    background: url(../images/icons/uncompress.png);
+}
+
+.item{
+	padding:3px 0px 3px 23px;
+	margin:0px;
+	line-height:20px;
+	min-height:20px;
+	vertical-align:middle;
+	white-space:nowrap;
+	cursor:pointer;
+	background-position: 3px 50%;
+	background-repeat:no-repeat;
+}
+
+.item:hover{
+	background-color: #CCCCCC;
+}
+
+.item{
+	background-image: url(../images/icons/page_white.png);
+}
+
+.item.ft_folder{
+	background: url("../images/icons/folder.png") no-repeat scroll left 5px transparent;
+}
+
+.item.ft_pdf{
+	background-image: url(../images/icons/page_white_acrobat.png);
+}
+
+.item.ft_cs{
+	background-image: url(../images/icons/page_white_csharp.png);
+}
+
+.item.ft_xls{
+	background-image: url(../images/icons/page_white_excel.png);
+}
+
+.item.ft_swf{
+	background-image: url(../images/icons/page_white_flash.png);
+}
+
+.item.ft_php{
+	background-image: url(../images/icons/page_white_php.png);
+}
+
+.item.ft_png,
+.item.ft_jpg,
+.item.ft_bmp,
+.item.ft_gif{
+	background-image: url(../images/icons/page_white_picture.png);
+}
+
+.item.ft_txt,
+.item.ft_js,
+.item.ft_css{
+	background-image:url(../images/icons/page_white_text.png);
+}
+
+.item.ft_htm,
+.item.ft_html{
+	background-image:url(../images/icons/page_white_code.png);
+}
+
+.item.ft_rar,
+.item.ft_zip{
+	background-image:url(../images/icons/page_white_compressed.png);
+}
+
+.sites {
+    width: 200px;
+    float: left;
+}
+
+.table_search {
+    width: 270px;
+    float: right;
+}
+
+.help {
+    display: block;
+    float: right;
+    margin: 3px 0 0 15px;
+    position: relative;
+}
+
+table .help {
+    margin: 0;
+}

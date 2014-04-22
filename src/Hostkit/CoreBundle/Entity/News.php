@@ -1,0 +1,108 @@
+<?php
+
+
+namespace Hostkit\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="news")
+ */
+class News
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $heading;
+    
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $details;
+    
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $created_at;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    
+
+    /**
+     * Set heading
+     *
+     * @param string $heading
+     */
+    public function setHeading($heading)
+    {
+        $this->heading = $heading;
+    }
+
+    /**
+     * Get heading
+     *
+     * @return string 
+     */
+    public function getHeading()
+    {
+        return $this->heading;
+    }
+
+    /**
+     * Set details
+     *
+     * @param string $details
+     */
+    public function setDetails($details)
+    {
+        $this->details = $details;
+    }
+
+    /**
+     * Get details
+     *
+     * @return string 
+     */
+    public function getDetails()
+    {
+        return $this->details;
+    }
+
+    /**
+     * Set created_at
+     *
+     * @param string $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->created_at = $createdAt;
+    }
+
+    /**
+     * Get created_at
+     *
+     * @return string 
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+}

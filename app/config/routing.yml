@@ -1,0 +1,27 @@
+hostkit_setup:
+    resource: "@HostkitSetupBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hostkit_xs_email:
+    resource: "@HostkitEmailBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hostkit_xs_core:
+    resource: "@HostkitCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hostkit_xs_shop:
+    resource: "@HostkitShopBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hostkit_xs_admin:
+    resource: "@HostkitAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+hostkit_xs_user:
+    resource: "@HostkitUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hostkit_xs_client:
+    resource: "@HostkitClientBundle/Resources/config/routing.yml"
+    prefix:   /client

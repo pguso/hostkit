@@ -1,0 +1,31 @@
+hostkit_xs_hosting_overview:
+    pattern:  /products/hosting
+    defaults: { _controller: HostkitAdminBundle:Products\Hosting:index }
+
+hostkit_xs_hosting_add:
+    pattern:  /products/hosting/add
+    defaults: { _controller: HostkitAdminBundle:Products\Hosting:add }
+
+hostkit_xs_hosting_modify:
+    pattern:  /products/hosting/modify/{productId}
+    defaults: { _controller: HostkitAdminBundle:Products\Hosting:modify }
+
+hostkit_xs_hosting_delete:
+    pattern:  /products/hosting/delete/{productId}
+    defaults: { _controller: HostkitAdminBundle:Products\Hosting:delete }
+
+hostkit_xs_domains_overview:
+    pattern:  /products/domains
+    defaults: { _controller: HostkitAdminBundle:Products\Domains:index }
+
+hostkit_xs_domains_add:
+    pattern:  /products/domains/add
+    defaults: { _controller: HostkitAdminBundle:Products\Domains:add }
+
+hostkit_xs_domains_modify:
+    pattern:  /products/domains/modify/{productId}
+    defaults: { _controller: HostkitAdminBundle:Products\Domains:modify }
+
+hostkit_xs_domains_delete:
+    pattern:  /products/domains/delete/{productId}
+    defaults: { _controller: HostkitAdminBundle:Products\Domains:delete }

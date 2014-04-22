@@ -1,0 +1,52 @@
+{% extends 'HostkitShopBundle:Default:index.html.twig' %}
+
+{% block content %}
+    {% if home is empty %}
+        <div class="jumbotron">
+            <div class="black-overlay">
+                <h1>Shared Hosting</h1>
+
+                <p>View our Hosting Packages! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                    eirmod tempor invidunt ut labore et dolore.</p>
+                <a href="{{ path('hostkit_xs_shop_hosting_overview') }}">
+                    <button class="btn btn-custom">View Packages</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+        <!-- Example row of columns -->
+        <div class="row featured-packages">
+            {% if packages %}
+                {% for package in packages %}
+                    <div class="col-lg-3">
+                        <i class="fa fa-hdd-o"></i>
+
+                        <h1>
+                            {{ package.name }}
+                            {% if package.price != 0 %}
+                                <br/><span>$ {{ package.price }} /month</span>
+                            {% else %}
+                                <br/> <span>Free</span>
+                            {% endif %}
+                        </h1>
+                        <ul>
+                            {% for desc in package.description %}
+                                <li>{{ desc }}</li>
+                            {% endfor %}
+                        </ul>
+                        <p><a class="btn btn-custom" href="/hosting" data-package="{{ package.id }}">View
+                                details &raquo;</a></p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="container margin-top">
+            <div class="row">
+                {{ home.content|raw }}
+            </div>
+
+    {% endif %}
+
+{% endblock %}

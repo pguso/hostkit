@@ -1,0 +1,26 @@
+<?php
+
+namespace Hostkit\CoreBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+
+class ArticleI18n
+{    
+    /**
+     * 
+     * @ORM\Column(name="locale", type="string", length=128)
+     */
+    private $locale;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Article", inversedBy="translations")
+     * @ORM\JoinColumn(name="article_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    protected $translatable;
+
+    /**
+     *
+     * @ORM\Column(name="name", type="string", length=128)
+     */
+    private $name;
+}
