@@ -1,5 +1,5 @@
-hostkit
-=======
+Hostkit - Community Edition
+===========================
 
 Hostkit is built with bootstrap 3 and symfony 2. Bootstrap and Symfony are both very good documented, if you want to customize the software to your needs you can do it easily.
 
