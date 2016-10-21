@@ -1,9 +1,0 @@
-parameters:
-#    hostkit_user.example.class: Hostkit\UserBundle\Example
-
-services:
-    hostkit_user.registration.form.type:
-        class: Hostkit\UserBundle\Form\Type\RegistrationFormType
-        arguments: [%fos_user.model.user.class%]
-        tags:
-            - { name: form.type, alias: hostkit_user_registration }

@@ -1,8 +1,0 @@
-parameters:
-#    hostkit_xs_shop.example.class: Hostkit\ShopBundle\Example
-
-services:
-#    hostkit_xs_shop.example:
-#        class: %hostkit_xs_shop.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
-

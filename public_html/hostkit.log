@@ -1,2 +1,0 @@
-[2014-01-28 15:26:17] app.ERROR: An error occurred [] []
-[2014-01-28 15:26:17] emergency.EMERGENCY: Call to undefined method HostkitXS\CoreBundle\Entity\PaymentTransaction::setProvider() {"type":1,"file":"/home/demohost/src/HostkitXS/ShopBundle/Controller/PaymentController.php","line":118} []
